@@ -15,3 +15,16 @@ movies.forEach(movie => {
     console.log('-----------------------------');
 });
 
+
+
+const mensaje = './mensaje.txt';
+
+const fs = require('fs');
+
+fs.readFile(mensaje, 'utf-8', (error, texto) => {
+    if (error) {
+        console.error('Error al leer el archivo:', error);
+        return;
+    }
+    console.log('Contenido del archivo:', texto);
+});
